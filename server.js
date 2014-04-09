@@ -45,8 +45,23 @@ io.sockets.on('connection', function (socket) {
 	io.sockets.emit('blast', {msg:"<span style=\"color:red !important\">someone connected</span>"});
 
 	socket.on('blast', function(data, fn){
-		console.log(data);
+		//console.log(data);
 		io.sockets.emit('blast', {msg:data.msg});
+
+		fn();//call the client back to clear out the field
+	});
+
+  socket.on('boom', function(data, fn){
+		//console.log(data);
+		io.sockets.emit('boom', {msg:data.image});
+
+		fn();//call the client back to clear out the field
+	});
+
+  socket.on('bow', function(data, fn){
+    console.log("Receving data");
+		//console.log(data);
+		io.sockets.emit('bow', {msg:data.audio});
 
 		fn();//call the client back to clear out the field
 	});

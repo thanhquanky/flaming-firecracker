@@ -45,22 +45,28 @@
     	<div class="jumbotron">
         	<h1>FlamingFirecracker</h1>
        		<p>A prototype to demonstrate socketio's capabilities. It also uses as a proof-of-concept for broadcasting data and realtime application.</p>
+          <h3>Author: Thanh Ky Quan</h3>
        		<div class="row">
-       			<div class="col-md-4 col-sm-6 col-xs-6">
+       			<div class="col-lg-12 col-sm-6 col-xs-6">
        				<h3>All Chatter<button id="clearAllPosts" type="button" class="btn btn-danger btn-xs pull-right">clear</button></h3>
-       				<div id="allPosts" class="form-control"></div>
-				    <div class="input-group">
-						<input id="blast" type="text" class="form-control" placeholder="send something to everyone">
-						<span class="input-group-btn">
-							<button id="send" class="btn btn-success" type="button">Send</button>
-						</span>
-				    </div><!-- /input-group -->
-       			</div>
-       		</div>
+       				<div id="allPosts" class="form-control" style="height: 300px"></div>
+              <div class="input-group">
+                <input id="blast" type="text" class="form-control" placeholder="send something to everyone">
+                Image <input id="image" type="file" placeholder="send image" multiple/>
+                MP3 <input id="audio" type="file" placeholder="send image" multiple/>
+                <span class="input-group-btn">
+                  <button id="send" class="btn btn-success" type="button">Send</button>
+                </span>
+              </div><!-- /input-group -->
+       	    </div>
+         </div>
+         <div class="row">
+          <div id="imageBox"></div>
+         </div>
 		</div>
 	</div>
-    
-    <!-- jQuery --> 
+
+    <!-- jQuery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="public/bower_components/jQuery/jquery.min.js"><\/script>')</script>
 

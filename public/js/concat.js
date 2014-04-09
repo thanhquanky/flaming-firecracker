@@ -1,9 +1,3 @@
-/*************************************
-//
-// flamingfirecracker app
-//
-**************************************/
-
 // connect to our socket server
 var socket = io.connect(window.location.href);
 
